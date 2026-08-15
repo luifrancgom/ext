@@ -42,7 +42,7 @@ _extensions/ext/
     └── custom.scss
 ```
 
-- `filters/by-role.lua`: mimics how quarto-cli builds `by-author` and `by-affiliation`, producing a `by-role` metadata structure that the partials (especially `_title-meta-grid.html`) can use.
+- `filters/by-role.lua`: mimics how quarto-cli builds `by-author` and `by-affiliation`, producing a `by-role` metadata structure that the partials (especially `_title-meta-grid.html`) can use. This is also what makes the `/first` pipe usable in Pandoc templates (e.g. `$if(by-role/first)$`), the same way it's usable with `by-affiliation/first`.
 - `partials/title-block.html`: the title block for the `html` format only, excluding the banner/manuscript variants used elsewhere in quarto.
 - `partials/title-metadata.html`: the other title metadata options used in quarto's `html` format.
 - `partials/_title-meta-grid.html`: adds the roles column and coordinates its layout with the author and affiliation columns.
