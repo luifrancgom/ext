@@ -1,0 +1,69 @@
+---
+title: This is a title
+subtitle: This is a subtitle
+author:
+  - name: Author 1
+    degrees: 
+      - Phd
+      - Msc
+    orcid: 1
+    email: author1@example.com
+    url: https://example.com/author1
+    affiliation: 
+      - Institute author 1 - 1
+      - Institute author 1 - 2
+    roles:
+      - Custom role 1
+      - Analysis
+    position:
+      - Professor of mathematics
+      - Associate professor
+  - name: Author 2
+    degrees: 
+      - Msc
+      - Bs
+    orcid: 2
+    email: author2@example.com
+    url: https://example.com/author2
+    affiliation:
+      - Institute author 2 - 1
+    roles:
+      - Custom role 3
+      - Custom role 4
+    position:
+      - Professor of economics
+      - Research Associate
+  - name: Author 3
+    degrees: 
+      - Bs
+    orcid: 3
+    email: author3@example.com
+    url: https://example.com/author3
+    affiliation: 
+      - Institute author 3 - 1
+      - Institute author 3 - 2
+      - Institute author 3 - 2
+    roles:
+      - Custom role 8
+      - writing
+    position:
+      - Professor of biology
+      - Assistant professor
+date: today
+date-modified: today
+abstract: |
+  {{< lipsum 1 >}}
+keywords: 
+  - Keyword 1
+  - Keyword 2
+  - Keyword 3
+format:
+  ext-html:
+    label: 
+      roles: roles
+    embed-resources: true
+---
+
+## Section
+
+{{< lipsum 1 >}}

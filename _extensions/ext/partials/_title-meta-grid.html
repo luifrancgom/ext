@@ -1,0 +1,39 @@
+$-- keep the leading space in conditional classes (e.g. " has-roles") 
+$-- or it merges into the previous class and breaks CSS matching
+<div class="quarto-title-meta-author$if(by-role/first)$ has-roles$endif$$if(by-affiliation/first)$ has-affiliations$endif$">
+  <div class="quarto-title-meta-heading">$labels.authors$</div>
+  $if(by-role/first)$
+  <div class="quarto-title-meta-heading">$label.roles$</div>
+  $endif$
+  $if(by-affiliation/first)$
+  <div class="quarto-title-meta-heading">$labels.affiliations$</div>
+  $endif$
+
+  $for(by-author)$
+  <div class="quarto-title-meta-contents">
+    <p class="author">$_title-meta-author.html()$</p>
+  </div>
+  $if(by-role/first)$
+  <div class="quarto-title-meta-contents">
+    $for(it.roles)$
+    <p class="role">$_title-meta-role.html()$</p>
+    $endfor$
+  </div>
+  $endif$
+  $if(by-affiliation/first)$
+  <div class="quarto-title-meta-contents">
+    $for(by-author.affiliations)$
+    <p class="affiliation">
+      $if(it.url)$
+      <a href="$it.url$">
+      $endif$
+      $it.name$
+      $if(it.url)$
+      </a>
+      $endif$
+    </p>
+    $endfor$
+  </div>
+  $endif$
+  $endfor$
+</div>

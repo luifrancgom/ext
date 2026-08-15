@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+
+/* TODO: Customize html appearance by setting SCSS variables */
+/* See https://quarto.org/docs/output-formats/html-themes.html#theme-options */
+
+/*-- scss:rules --*/
+
+/* TODO: Provide custom CSS rules */
+.quarto-title-meta-contents {
+  font-size: 0.9em;
+
+  p.role:last-of-type,
+  p.affiliation:last-of-type {
+    margin-bottom: 0.1em;
+  }
+
+  p.role::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.quarto-title-meta-author {
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) 1fr;
+  grid-column-gap: 1em;
+
+  &.has-roles,
+  &.has-affiliations {
+    grid-template-columns: minmax(max-content, 1fr) 1fr!important;
+  }
+
+  &.has-roles.has-affiliations {
+    grid-template-columns: minmax(max-content, 1fr) repeat(2, 1fr)!important;
+  }
+}
